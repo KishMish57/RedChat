@@ -212,6 +212,7 @@ def get_weather():
         return jsonify({'error': str(e)}), 500
 
 
+application = app
 if __name__ == '__main__':
     print('\n' + '=' * 50)
     print('=' * 50 + '\n')
