@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>RedChat</title>
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -155,12 +154,12 @@
         <div class="site-title">RedChat</div>
         
         <div id="loginPanel">
-            <h2 class="text-center">Вход</h2>
+            <h2 class="text-center">вход</h2>
             <input type="text" id="loginName" class="form-control mb-2" placeholder="имя">
             <input type="password" id="loginPass" class="form-control mb-2" placeholder="пароль">
-            <button onclick="login()" class="btn btn-danger w-100 mb-2">Войти</button>
+            <button onclick="login()" class="btn btn-danger w-100 mb-2">войти</button>
             <div class="text-center">
-                <a href="#" onclick="showReg()" class="text-danger">Регистрация</a>
+                <a href="#" onclick="showReg()" class="text-danger">регистрация</a>
             </div>
             <div id="loginErr" class="alert alert-danger mt-2 d-none"></div>
         </div>
@@ -171,7 +170,7 @@
             <input type="password" id="regPass" class="form-control mb-2" placeholder="пароль (6+)">
             <input type="file" id="regAvatar" class="form-control mb-2" accept="image/*" onchange="previewAvatar()">
             <div id="avatarPreview" class="avatar-preview"></div>
-            <button onclick="register()" class="btn btn-danger w-100 mb-2">Зарегистрироваться</button>
+            <button onclick="register()" class="btn btn-danger w-100 mb-2">зарегистрироваться</button>
             <div class="text-center">
                 <a href="#" onclick="showLogin()" class="text-danger">вход</a>
             </div>
