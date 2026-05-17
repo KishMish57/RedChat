@@ -1,0 +1,16 @@
+тз и описание проекта
+проект сделан Михаилом Колтаковым. 
+необходимо сделать мессенджер. 
+есть страничка регистрации, входа и чата. 
+функционал (что для чего сделано и что сделать для работы приложения)описан в readme
+используемые технологии:
+requirements.txt
+bootstrap (используется в классах: form-control, btn, btn-danger, alert, d-none)
+orm-модели (классы user и message)
+регистрация (функция register в html-файле и маршрут /api/register на сервере)
+авторизация (функция login в html-файле и маршрут /api/login на сервере)
+загрузка файлов (функция uploadAvatar в html-файле и маршрут /api/upload_avatar на сервере)
+api: rest (маршруты /api/test, /api/register, /api/login, /api/messages, /api/users, /api/upload_avatar, /api/weather, /uploads/<filename> на сервере)
+стороннее api (функция getWeather в html-файле и маршрут /api/weather на сервере)
+хранение данных в бд chat.db
+хостинг
