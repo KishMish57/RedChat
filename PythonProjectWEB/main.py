@@ -20,7 +20,7 @@ if not os.path.exists(UPLOAD_FOLDER):
     print(f"создана папка: {UPLOAD_FOLDER}")
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024 
+app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
 
 CORS(app, supports_credentials=True, origins='*')
 
@@ -49,6 +49,33 @@ with app.app_context():
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
+
+@app.route('/', methods=['GET', 'POST'])
+def index():
+    return '''
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Чат</title>
+        <style>
+            body { font-family: Arial; padding: 20px; }
+            h1 { color: #333; }
+        </style>
+    </head>
+    <body>
+        <h1>Чат Сервер</h1>
+        <p>API работает на порту 5000</p>
+        <p>Эндпоинты:</p>
+        <ul>
+            <li>POST /api/register - регистрация</li>
+            <li>POST /api/login - вход</li>
+            <li>GET/POST /api/messages - сообщения</li>
+            <li>GET /api/users - пользователи</li>
+            <li>GET /api/weather - погода</li>
+        </ul>
+    </body>
+    </html>
+    '''
 
 @app.route('/api/test', methods=['GET'])
 def test():
@@ -212,7 +239,6 @@ def get_weather():
         return jsonify({'error': str(e)}), 500
 
 
-application = app
 if __name__ == '__main__':
     print('\n' + '=' * 50)
     print('=' * 50 + '\n')
